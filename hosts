@@ -1,0 +1,20 @@
+---
+all:
+  hosts:
+    cent-site
+  vars:
+    project_name: my_test_project
+    appnode_proxy: appnode.
+    mysql_root_pass: TestPass321
+    sql_username: sql_user
+    sql_password: UserPass654
+  children:
+    dbservers:
+      hosts:
+        cent-base
+    appnodes:
+      hosts:
+        cent-app
+    gateways:
+      hosts:
+        cent-gate

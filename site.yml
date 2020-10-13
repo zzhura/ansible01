@@ -1,0 +1,16 @@
+---
+- name: prepare dev setup with gateway
+  hosts: gateways
+  remote_user: root
+  roles:
+    - gateways
+- name: prepare dev setup with datanodes
+  hosts: dbservers
+  remote_user: root
+  roles:
+    - dbservers
+- name: prepare dev setup with appnodes
+  hosts: appnodes
+  remote_user: root
+  roles:
+    - appnodes
