@@ -1,5 +1,5 @@
 # ansible01
-dev gate+app+db
+dev deployment = gate+app+db
 
 app = nginx + php-fpm
 
